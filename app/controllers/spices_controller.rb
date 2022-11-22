@@ -1,7 +1,7 @@
 class SpicesController < ApplicationController
     
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-
+    wrap_parameters format: []
     # GET /spices
   def index
     spices = Spice.all
